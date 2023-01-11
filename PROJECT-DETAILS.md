@@ -23,8 +23,8 @@ To navigate to our FigJam wireframe in your browser, click [here](https://www.fi
 ## APIs to be used
 
 - Stocks: [polygon.io](https://polygon.io/)
-- News Articles: [newsapi.api](https://www.newsapi.ai/#)
-- Weather: [newsapi.api](https://www.newsapi.ai/#)
+- News Articles: [https://newsapi.org/](https://newsapi.org/docs/get-started)
+- Weather: [https://openweathermap.org/](https://openweathermap.org/api/geocoding-api)
 - Random Words: [Words API](https://www.wordsapi.com/docs/#random-words)
   (or) Word of the Day: [APIs for Librarians](https://www.apis4librarians.com/wordnik/word-of-the-day)
 
