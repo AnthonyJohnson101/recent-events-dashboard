@@ -1,35 +1,51 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-
-/* * {
+* {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
-h1 {
-  display: flex;
-  font-weight: 200;
-  background-color: rgb(59, 56, 255);
-  color: white;
-  justify-content: center;
+#container {
+  margin: 10px;
 }
 
-title {
-  color: rgb(59, 56, 255);
-}
+
 
 body {
-  background-color: #adcbff;
+  background-color: #e0edff;
+  min-height: 100vh;
 }
 
-.card {
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
+h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  background-color: rgb(51, 164, 253);
+  color: white;
+  font-size: 32px;
+}
+
+strong {
+  font-weight: 500;
+  color: white;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+li {
+  font-size: 14px;
 }
 
 footer {
   display: flex;
   font-weight: 200;
-  background-color: rgb(59, 56, 255);
+  background-color: rgb(51, 164, 253);
   color: white;
   justify-content: center;
-} */
+} 

@@ -4,38 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Day2Day</title>
   </head>
 
   <body>
-    <header><h1><strong>Day</strong>2<strong>Day</strong></h1>
-    <div class="Date"></div>
-</header>
-<section class="title"><h2>Stocks</h2>
-<article class="title"><h2>Your Stocks</h2></article>
-</section>
+    <header>
+      <h1><strong>Day</strong>2<strong>Day</strong></h1>
+      <div class="date"></div>
+    </header>
+    <div class="container is-fluid" id="container">
+      <div class="columns">
+        <div class="column left is-4">
+          <div class="box">
+            <h2 class="subtitle is-4">Stocks</h2>
+            <ul>
+              <li id="stockName">stockName</li>
+              <li id="openPrice">openPrice</li>
+              <li id="closePrice">closePrice</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2 class="subtitle is-4">Your Stocks</h2>
+            <div class="yourStocks">
+              <ul>
+                <li id="stockName">stockName</li>
+                <li id="openPrice">openPrice</li>
+                <li id="closePrice">closePrice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="column right is-8">
+          <div class="columns">
+            <div class="column is-half">
+              <div class="box">
+                <h2 class="subtitle is-4">Word of the Day</h2>
+                <div class="vocabWord">vocab word here!</div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h2 class="subtitle is-4">Major City Temperature</h2>
+                <div class="cityTemp">Temperature here!</div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <h2 class="subtitle is-4">Recent News</h2>
+            <div class="newsArticle">article 1</div>
+            <div class="newsArticle">article 2</div>
+            <div class="newsArticle">article 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-<section class="title"><h2>News</h3></section>
-  <article class="title"><h2>Word of the Day</h2></article>
-  <article class="title"><h2>Major City (drop down)</h2></article>
-  <article class="title"><h2>News article</h2>
-  <div class="box-title">
-    <div id="box1">Box 1</div>
-    <div id="box2">Box 2</div>
-    <div id="box3">Box 3</div>
-  </div></article>
-<address><footer><p>Footer</p></footer></address>
-
-
-
+    <footer>
+      <p>Footer</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
-
