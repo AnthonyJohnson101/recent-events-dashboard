@@ -19,9 +19,14 @@
   </head>
 
   <body>
-
     <header>
-      <h1><strong>Day</strong>2<strong>Day</strong></h1>
+      <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
+      <!--  <section class="hero">
+        <div class="hero-body">
+          <p class="title">January 12, 2023</p>
+          <p class="subtitle">2023</p>
+        </div>
+      </section> -->
       <div class="date"></div>
     </header>
     <div class="container is-fluid" id="container">
@@ -29,20 +34,44 @@
         <div class="column left is-4">
           <div class="box">
             <h2 class="subtitle is-4">Stocks</h2>
-            <ul>
-              <li id="stockName">stockName</li>
-              <li id="openPrice">openPrice</li>
-              <li id="closePrice">closePrice</li>
-            </ul>
+            <div class="card mb-4 mt-0 stock-card">
+              <div class="card-content is-flex-wrap-wrap">
+                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                <p class="openPrice is-size-7">open</p>
+                <p class="closePrice is-size-7">close</p>
+              </div>
+            </div>
+            <div class="card stock-card">
+              <div class="card-content is-flex-wrap-wrap">
+                <p class="subtitle is-5 m-0 has-text-white stockName">TSLA</p>
+                <p class="openPrice is-size-7">open</p>
+                <p class="closePrice is-size-7">close</p>
+              </div>
+            </div>
           </div>
+          <!-- new content ends here  -->
           <div class="box">
             <h2 class="subtitle is-4">Your Stocks</h2>
-            <div class="yourStocks">
-              <ul>
-                <li id="stockName">stockName</li>
-                <li id="openPrice">openPrice</li>
-                <li id="closePrice">closePrice</li>
-              </ul>
+            <div class="card mb-4 mt-0 stock-card">
+              <div class="card-content is-flex-wrap-wrap">
+                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                <p class="openPrice is-size-7">open</p>
+                <p class="closePrice is-size-7">close</p>
+              </div>
+            </div>
+            <div class="card mb-4 mt-0 stock-card">
+              <div class="card-content is-flex-wrap-wrap">
+                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                <p class="openPrice is-size-7">open</p>
+                <p class="closePrice is-size-7">close</p>
+              </div>
+            </div>
+            <div class="card mt-0 stock-card">
+              <div class="card-content is-flex-wrap-wrap">
+                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                <p class="openPrice is-size-7">open</p>
+                <p class="closePrice is-size-7">close</p>
+              </div>
             </div>
           </div>
         </div>
@@ -71,19 +100,30 @@
       </div>
     </div>
 
-    <footer>
-      <p>Footer</p>
-    </footer>
-
-<div class="address">
-  <footer>
-    <p><a href="https://www.google.com/finance/?hl=en">Stock📈</a><a href= "https://www.google.com/finance/?hl=en" target="_blank"></a> 
-    <p><a href="https://github.com/ndallich1">Github</a><a href="https://github.com/ndallich1" target="_blank"></a><i class="fa-brands fa-github"></i>
-    <p><a href="https://github.com/AnthonyJohnson101">Github</a><a href="https://github.com/AnthonyJohnson101" target="_blank"></a><i class="fa-brands fa-github"></i>
-    <p><a href="https://github.com/Beatriz-Rivard">Github</a><a href= "https://github.com/Beatriz-Rivard" target="_blank"></a><i class="fa-brands fa-github"></i>
-  </footer>
-</div>  
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
-   <script src="./assets/script.js"></script>
+    <div class="address">
+      <footer>
+        <p>
+          <a href="https://www.google.com/finance/?hl=en">Stock📈</a
+          ><a href="https://www.google.com/finance/?hl=en" target="_blank"></a>
+        </p>
+        <p>
+          <a href="https://github.com/ndallich1">Github</a
+          ><a href="https://github.com/ndallich1" target="_blank"></a
+          ><i class="fa-brands fa-github"></i>
+        </p>
+        <p>
+          <a href="https://github.com/AnthonyJohnson101">Github</a
+          ><a href="https://github.com/AnthonyJohnson101" target="_blank"></a
+          ><i class="fa-brands fa-github"></i>
+        </p>
+        <p>
+          <a href="https://github.com/Beatriz-Rivard">Github</a
+          ><a href="https://github.com/Beatriz-Rivard" target="_blank"></a
+          ><i class="fa-brands fa-github"></i>
+        </p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>

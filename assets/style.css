@@ -8,9 +8,12 @@
   margin: 10px;
 }
 
-
+.card-footer-item {
+  color: black;
+}
 
 body {
+  /* background-image: linear-gradient(white, rgb(51, 164, 253)); */
   background-color: #e0edff;
   min-height: 100vh;
 }
@@ -21,21 +24,27 @@ body {
 
 h1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 10px;
   font-weight: 200;
   background-color: rgb(51, 164, 253);
   color: white;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 800;
   color: white;
 }
 
 h2 {
   font-weight: 400;
   font-size: 22px;
+}
+
+.stock-card {
+  background-color: rgb(59, 59, 59);
+  color: white
 }
 
 li {
