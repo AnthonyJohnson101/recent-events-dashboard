@@ -49,3 +49,25 @@ footer {
   color: white;
   justify-content: center;
 } 
+
+.search-box {
+background-color: none;
+padding: none;
+border-radius: 5px;
+display: left;
+justify-content: space-around;
+align-items: flex-end;
+position: relative;
+left: 15%;
+top: 30%;
+}
+
+.txt-box{
+  background-color: none;
+  padding: 20%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
