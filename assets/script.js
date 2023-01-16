@@ -40,17 +40,17 @@ function getStockData() {
 //News API setup
 
 //set to selectors
-let thumbnail1
-let title1
-let articleUrl1
+let thumbnail1 = document.querySelector("#thumbnail1")
+let title1 = document.querySelector("#title1")
+let articleUrl1 = document.querySelector("#articleUrl1")
 
-let thumbnail2
-let title2
-let articleUrl2
+let thumbnail2 = document.querySelector("#thumbnail2")
+let title2 = document.querySelector("#title2")
+let articleUrl2 = document.querySelector("#articleUrl2")
 
-let thumbnail3
-let title3
-let articleUrl3
+let thumbnail3 = document.querySelector("#thumbnail3")
+let title3 = document.querySelector("#title3")
+let articleUrl3 = document.querySelector("#articleUrl3")
 
 
 
@@ -58,7 +58,7 @@ function getNewsData() {
 
     let now = dayjs().format("YYYY-MM-DD")
 
-    let newsTopic = "covid" //make input
+    let newsTopic = "US" //make input
 
     let newsUrl = `https://newsapi.org/v2/top-headlines?q=${newsTopic}&from=${now}&sortBy=popularity&country=us&apiKey=82561c971d50430187557fc656da806a`
         fetch(newsUrl)
@@ -70,7 +70,7 @@ function getNewsData() {
                 .then(function (data) {
                     console.log(data);
 
-                    /* thumbnail1.src = data.articles[0].urlToImage
+                    thumbnail1.src = data.articles[0].urlToImage
                     title1.textContent = data.articles[0].title
                     articleUrl1.href = data.articles[0].url
 
@@ -80,7 +80,7 @@ function getNewsData() {
 
                     thumbnail3.src = data.articles[2].urlToImage
                     title3.textContent = data.articles[2].title
-                    articleUrl3.href = data.articles[2].url */
+                    articleUrl3.href = data.articles[2].url
 
 
                 });
@@ -88,34 +88,37 @@ function getNewsData() {
 
             getNewsData();
 
-
-
-
 //weather API setup
 let temp
 let icon
-function getWeatherData() {
-    let cityName = "Detroit"
 
-    let weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=536f859786a518738a9b20276be37ff1&units=imperial`
+               
+const successCallback = (position) => {
+        console.log(position);
 
-            fetch(weatherUrl)
+        let lat = position.coords.latitude
+        let lon = position.coords.longitude
+
+        let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=536f859786a518738a9b20276be37ff1&units=imperial`
+
+        fetch(weatherUrl)
             .then(function (response) {
-                
+                        
                 return response.json();
             })
 
             .then(function (data) {
-                console.log(data);
-
-                /* temp = data.list[0].main.temp
-                icon.src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png" */
-
-
+             console.log(data);
+            /* temp = data.list[0].main.temp
+            icon.src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png" */ 
             });
         };
-
-        getWeatherData();
+    
+    const errorCallback = (error) => {
+        console.log(error);
+    };
+    
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);            
 
 //dictionary API setup
 
