@@ -56,11 +56,8 @@ let articleUrl3 = document.querySelector("#articleUrl3")
 
 function getNewsData() {
 
-    let now = dayjs().format("YYYY-MM-DD")
 
-    let newsTopic = "US" //make input
-
-    let newsUrl = `http://newsapi.org/v2/top-headlines?q=${newsTopic}&from=${now}&sortBy=popularity&country=us&apiKey=82561c971d50430187557fc656da806a`
+    let newsUrl = `https://gnews.io/api/v4/top-headlines?token=c0ce1376fc76d20830d8473d38ce3ea9&topic=breaking-news&country=us`
         fetch(newsUrl)
                 .then(function (response) {
                     
@@ -70,15 +67,15 @@ function getNewsData() {
                 .then(function (data) {
                     console.log(data);
 
-                    thumbnail1.src = data.articles[0].urlToImage
+                    thumbnail1.src = data.articles[0].image
                     title1.textContent = data.articles[0].title
                     articleUrl1.href = data.articles[0].url
 
-                    thumbnail2.src = data.articles[1].urlToImage
+                    thumbnail2.src = data.articles[1].image
                     title2.textContent = data.articles[1].title
                     articleUrl2.href = data.articles[1].url
 
-                    thumbnail3.src = data.articles[2].urlToImage
+                    thumbnail3.src = data.articles[2].image
                     title3.textContent = data.articles[2].title
                     articleUrl3.href = data.articles[2].url
 
