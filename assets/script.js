@@ -60,7 +60,7 @@ function getNewsData() {
 
     let newsTopic = "US" //make input
 
-    let newsUrl = `https://newsapi.org/v2/top-headlines?q=${newsTopic}&from=${now}&sortBy=popularity&country=us&apiKey=82561c971d50430187557fc656da806a`
+    let newsUrl = `http://newsapi.org/v2/top-headlines?q=${newsTopic}&from=${now}&sortBy=popularity&country=us&apiKey=82561c971d50430187557fc656da806a`
         fetch(newsUrl)
                 .then(function (response) {
                     
@@ -123,12 +123,11 @@ const successCallback = (position) => {
 //dictionary API setup
 
 let word
-function getDictionaryData() {
-    let word = "purple"
+function randomWordData() {
 
-    let dictionaryUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=3f822b6b-4ac4-4981-8976-890864d87cb8`
+    let randomWordUrl = `https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=zzy79quh09ugrg1shgdd2vkt6snleh2tr68h1qp7dma0h9qdy`
 
-            fetch(dictionaryUrl)
+            fetch(randomWordUrl)
             .then(function (response) {
                 
                 return response.json();
@@ -143,4 +142,4 @@ function getDictionaryData() {
         
         };
 
-            getDictionaryData();
+            randomWordData();
