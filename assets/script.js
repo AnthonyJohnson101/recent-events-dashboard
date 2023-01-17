@@ -56,7 +56,6 @@ let articleUrl3 = document.querySelector("#articleUrl3")
 
 function getNewsData() {
 
-
     let newsUrl = `https://gnews.io/api/v4/top-headlines?token=c0ce1376fc76d20830d8473d38ce3ea9&topic=breaking-news&country=us`
         fetch(newsUrl)
                 .then(function (response) {
