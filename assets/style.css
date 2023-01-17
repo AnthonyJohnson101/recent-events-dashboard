@@ -71,3 +71,69 @@ top: 30%;
   align-items: center;
 }
 
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+#container {
+  margin: 10px;
+}
+
+.card-footer-item {
+  color: black;
+}
+
+body {
+  /* background-image: linear-gradient(white, rgb(51, 164, 253)); */
+  background-color: #e0edff;
+  min-height: 100vh;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  font-weight: 200;
+  background-color: rgb(51, 164, 253);
+  color: white;
+  font-size: 24px;
+}
+
+strong {
+  font-weight: 800;
+  color: white;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.stock-card {
+  background-color: rgb(59, 59, 59);
+  color: white
+}
+
+li {
+  font-size: 14px;
+}
+footer {
+  display: flex;
+  font-weight: 200;
+  background-color: rgb(51, 164, 253);
+  color: white;
+}
+.news {
+    width: 33%;
+}
+.name-group {
+margin-left: auto;
+display: flex;
+gap: 15px;
+}
