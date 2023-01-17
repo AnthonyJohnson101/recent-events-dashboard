@@ -56,11 +56,7 @@ let articleUrl3 = document.querySelector("#articleUrl3")
 
 function getNewsData() {
 
-    let now = dayjs().format("YYYY-MM-DD")
-
-    let newsTopic = "US" //make input
-
-    let newsUrl = `https://newsapi.org/v2/top-headlines?q=${newsTopic}&from=${now}&sortBy=popularity&country=us&apiKey=82561c971d50430187557fc656da806a`
+    let newsUrl = `https://gnews.io/api/v4/top-headlines?token=c0ce1376fc76d20830d8473d38ce3ea9&topic=breaking-news&country=us`
         fetch(newsUrl)
                 .then(function (response) {
                     
@@ -70,15 +66,15 @@ function getNewsData() {
                 .then(function (data) {
                     console.log(data);
 
-                    thumbnail1.src = data.articles[0].urlToImage
+                    thumbnail1.src = data.articles[0].image
                     title1.textContent = data.articles[0].title
                     articleUrl1.href = data.articles[0].url
 
-                    thumbnail2.src = data.articles[1].urlToImage
+                    thumbnail2.src = data.articles[1].image
                     title2.textContent = data.articles[1].title
                     articleUrl2.href = data.articles[1].url
 
-                    thumbnail3.src = data.articles[2].urlToImage
+                    thumbnail3.src = data.articles[2].image
                     title3.textContent = data.articles[2].title
                     articleUrl3.href = data.articles[2].url
 
@@ -89,9 +85,8 @@ function getNewsData() {
             getNewsData();
 
 //weather API setup
-let temp
-let icon
-
+let temp = document.querySelector("#temp")
+let weatherIcon = document.querySelector("#weatherIcon")
                
 const successCallback = (position) => {
         console.log(position);
@@ -109,8 +104,8 @@ const successCallback = (position) => {
 
             .then(function (data) {
              console.log(data);
-            /* temp = data.list[0].main.temp
-            icon.src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png" */ 
+            temp.textContent = data.main.temp + " °F"
+            weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
             });
         };
     
@@ -122,13 +117,14 @@ const successCallback = (position) => {
 
 //dictionary API setup
 
-let word
-function getDictionaryData() {
-    let word = "purple"
+let word = document.querySelector("#word")
+let wordType = document.querySelector("#wordType")
+let definition = document.querySelector("#definition")
+function randomWordData() {
 
-    let dictionaryUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=3f822b6b-4ac4-4981-8976-890864d87cb8`
+    let randomWordUrl = `https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=zzy79quh09ugrg1shgdd2vkt6snleh2tr68h1qp7dma0h9qdy`
 
-            fetch(dictionaryUrl)
+            fetch(randomWordUrl)
             .then(function (response) {
                 
                 return response.json();
@@ -137,10 +133,12 @@ function getDictionaryData() {
             .then(function (data) {
                 console.log(data);
 
-
+                word.textContent = data.word
+                wordType.textContent = data.definitions[0].partOfSpeech
+                definition.textContent = data.definitions[0].text
             
             });
         
         };
 
-            getDictionaryData();
+            randomWordData();
