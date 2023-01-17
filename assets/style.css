@@ -4,16 +4,12 @@
   font-weight: 400;
 }
 
-#container {
-  margin: 10px;
-}
-
 .card-footer-item {
   color: black;
 }
 
 body {
-  /* background-image: linear-gradient(white, rgb(51, 164, 253)); */
+  background-image: linear-gradient(white, rgb(51, 164, 253));
   background-color: #e0edff;
   min-height: 100vh;
 }
@@ -29,7 +25,7 @@ h1 {
   font-weight: 200;
   background-color: rgb(51, 164, 253);
   color: white;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 strong {
@@ -40,6 +36,14 @@ strong {
 h2 {
   font-weight: 400;
   font-size: 22px;
+}
+
+.input {
+  font-size: 12px;
+}
+
+.button {
+  font-size: 12px;
 }
 
 .stock-card {
@@ -58,8 +62,3 @@ footer {
   color: white;
   justify-content: center;
 } 
-
-.news {
-    width: 33%;
-    
-}

@@ -21,149 +21,178 @@
   <body>
     <header>
       <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
-      <!--  <section class="hero">
+      <section class="hero">
         <div class="hero-body">
-          <p class="title">January 12, 2023</p>
-          <p class="subtitle">2023</p>
+          <p class="title is-1">Monday</p>
+          <p class="subtitle is-3">January 12, 2023</p>
         </div>
-      </section> -->
+      </section>
       <div class="date"></div>
     </header>
-    <div class="container is-fluid" id="container">
-      <div class="columns">
-        <div class="column left is-4">
-          <div class="box">
-            <h2 class="subtitle is-4">Stocks</h2>
-            <div class="card mb-4 mt-0 stock-card">
-              <div class="card-content is-flex-wrap-wrap">
-                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
-                <p class="openPrice is-size-7">open</p>
-                <p class="closePrice is-size-7">close</p>
-              </div>
-            </div>
-            <div class="card stock-card">
-              <div class="card-content is-flex-wrap-wrap">
-                <p class="subtitle is-5 m-0 has-text-white stockName">TSLA</p>
-                <p class="openPrice is-size-7">open</p>
-                <p class="closePrice is-size-7">close</p>
-              </div>
-            </div>
-          </div>
-          <!-- new content ends here  -->
-          <div class="box">
-            <h2 class="subtitle is-4">Your Stocks</h2>
-            <div class="card mb-4 mt-0 stock-card">
-              <div class="card-content is-flex-wrap-wrap">
-                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
-                <p class="openPrice is-size-7">open</p>
-                <p class="closePrice is-size-7">close</p>
-              </div>
-            </div>
-            <div class="card mb-4 mt-0 stock-card">
-              <div class="card-content is-flex-wrap-wrap">
-                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
-                <p class="openPrice is-size-7">open</p>
-                <p class="closePrice is-size-7">close</p>
-              </div>
-            </div>
-            <div class="card mt-0 stock-card">
-              <div class="card-content is-flex-wrap-wrap">
-                <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
-                <p class="openPrice is-size-7">open</p>
-                <p class="closePrice is-size-7">close</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column right is-8">
-          <div class="columns">
-            <div class="column is-half">
-              <div class="box">
-                <h2 class="subtitle is-4">Word of the Day</h2>
-                <div class="vocabWord">vocab word here!</div>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="box">
-                <h2 class="subtitle is-4">Major City Temperature</h2>
-                <div class="cityTemp">Temperature here!</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="box">
-            <h2 class="subtitle is-4">Today's Most Viewed News</h2>
+    <main>
+      <div class="container is-fluid" id="container">
+        <div class="columns">
+          <div class="column left is-4">
+            <div class="box">
+              <h2 class="subtitle is-4">Stocks</h2>
+              <div class="card mb-4 mt-0 stock-card">
+                <div class="card-content is-flex-wrap-wrap">
+                  <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                  <p class="openPrice is-size-7">open</p>
+                  <p class="closePrice is-size-7">close</p>
+                </div>
+              </div>
+              <div class="card stock-card">
+                <div class="card-content is-flex-wrap-wrap">
+                  <p class="subtitle is-5 m-0 has-text-white stockName">TSLA</p>
+                  <p class="openPrice is-size-7">open</p>
+                  <p class="closePrice is-size-7">close</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="columns">
+                <div class="column">
+                  <h2 class="subtitle is-4">Your Stocks</h2>
+                </div>
+                <div class="column">
+                  <div class="field is-grouped">
+                    <p class="control is-expanded">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Enter Ticker"
+                      />
+                    </p>
+                    <p class="control">
+                      <a class="button is-pulled-right m-0 p-1">🔍</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4 mt-0 stock-card">
+                <div class="card-content is-flex-wrap-wrap">
+                  <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                  <p class="openPrice is-size-7">open</p>
+                  <p class="closePrice is-size-7">close</p>
+                </div>
+              </div>
+              <div class="card mb-4 mt-0 stock-card">
+                <div class="card-content is-flex-wrap-wrap">
+                  <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                  <p class="openPrice is-size-7">open</p>
+                  <p class="closePrice is-size-7">close</p>
+                </div>
+              </div>
+              <div class="card mt-0 stock-card">
+                <div class="card-content is-flex-wrap-wrap">
+                  <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
+                  <p class="openPrice is-size-7">open</p>
+                  <p class="closePrice is-size-7">close</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column right is-8">
             <div class="columns">
-
-              <div class="card news">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" id="thumbnail1">
-                  </figure>
+              <div class="column is-half">
+                <div class="box">
+                  <h2 class="subtitle is-4">Word of the Day</h2>
+                  <div class="vocabWord">vocab word here!</div>
                 </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-4" id="title1"></p>
+              </div>
+              <div class="column is-half">
+                <div class="box">
+                  <h2 class="subtitle is-4">Major City Temperature</h2>
+                  <div class="cityTemp">Temperature here!</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <h2 class="subtitle is-4">Today's Most Viewed News</h2>
+              <div class="columns is-full">
+                <div class="column">
+                  <div class="card news">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img
+                          src="https://bulma.io/images/placeholders/1280x960.png"
+                          alt="Placeholder image"
+                          id="thumbnail1"
+                        />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4" id="title1"></p>
+                        </div>
+                      </div>
+
+                      <div class="content">
+                        <a href="" id="articleUrl1">Read Article</a>
+                        <br />
+                      </div>
                     </div>
                   </div>
-              
-                  <div class="content">
-                    <a href="" id="articleUrl1">Read Article</a>
-                    <br>
+                </div>
+                <div class="column">
+                  <div class="card news">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img
+                          src="https://bulma.io/images/placeholders/1280x960.png"
+                          alt="Placeholder image"
+                          id="thumbnail2"
+                        />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4" id="title2"></p>
+                        </div>
+                      </div>
+
+                      <div class="content">
+                        <a href="" id="articleUrl2">Read Article</a>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card news">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img
+                          src="https://bulma.io/images/placeholders/1280x960.png"
+                          alt="Placeholder image"
+                          id="thumbnail3"
+                        />
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4" id="title3"></p>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <a href="" id="articleUrl3">Read Article</a>
+                        <br />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-
-              <div class="card news">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" id="thumbnail2">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">                    
-                    <div class="media-content">
-                      <p class="title is-4" id="title2"></p>
-                      
-                    </div>
-                  </div>
-              
-                  <div class="content">
-                    <a href="" id="articleUrl2">Read Article</a>
-                    <br>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="card news">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image" id="thumbnail3">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">                    
-                    <div class="media-content">
-                      <p class="title is-4" id="title3"></p>
-                      
-                    </div>
-                  </div>
-              
-                  <div class="content">
-                    <a href="" id="articleUrl3">Read Article</a>
-                    <br>
-                  </div>
-                </div>
-              </div>
-
-            </div>  
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <div class="address">
       <footer>
