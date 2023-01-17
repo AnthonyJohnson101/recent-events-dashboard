@@ -4,89 +4,12 @@
   font-weight: 400;
 }
 
-#container {
-  margin: 10px;
-}
-
-
-
-body {
-  background-color: #e0edff;
-  min-height: 100vh;
-}
-
-.block:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  font-weight: 200;
-  background-color: rgb(51, 164, 253);
-  color: white;
-  font-size: 32px;
-}
-
-strong {
-  font-weight: 500;
-  color: white;
-}
-
-h2 {
-  font-weight: 400;
-  font-size: 22px;
-}
-
-li {
-  font-size: 14px;
-}
-
-footer {
-  display: flex;
-  font-weight: 200;
-  background-color: rgb(51, 164, 253);
-  color: white;
-  justify-content: center;
-} 
-
-.search-box {
-background-color: none;
-padding: none;
-border-radius: 5px;
-display: left;
-justify-content: space-around;
-align-items: flex-end;
-position: relative;
-left: 15%;
-top: 30%;
-}
-
-.txt-box{
-  background-color: none;
-  padding: 20%;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-* {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-#container {
-  margin: 10px;
-}
-
 .card-footer-item {
   color: black;
 }
 
 body {
-  /* background-image: linear-gradient(white, rgb(51, 164, 253)); */
+  background-image: linear-gradient(white, rgb(51, 164, 253));
   background-color: #e0edff;
   min-height: 100vh;
 }
@@ -102,7 +25,7 @@ h1 {
   font-weight: 200;
   background-color: rgb(51, 164, 253);
   color: white;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 strong {
@@ -115,6 +38,14 @@ h2 {
   font-size: 22px;
 }
 
+.input {
+  font-size: 12px;
+}
+
+.button {
+  font-size: 12px;
+}
+
 .stock-card {
   background-color: rgb(59, 59, 59);
   color: white
@@ -123,17 +54,16 @@ h2 {
 li {
   font-size: 14px;
 }
+
 footer {
   display: flex;
   font-weight: 200;
   background-color: rgb(51, 164, 253);
   color: white;
-}
+  justify-content: center;
+} 
+
 .news {
     width: 33%;
-}
-.name-group {
-margin-left: auto;
-display: flex;
-gap: 15px;
+    
 }
