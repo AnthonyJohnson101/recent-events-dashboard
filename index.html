@@ -80,19 +80,33 @@
             <div class="column is-half">
               <div class="box">
                 <h2 class="subtitle is-4">Word of the Day</h2>
-                <div class="vocabWord">vocab word here!</div>
+                <div class="vocabWord">
+
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="content" id="word"></div>
+                      <div class="content" id="wordType"></div>
+                      <div class="content" id="definition"></div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
             <div class="column is-half">
               <div class="box">
-                <h2 class="subtitle is-4">Major City Temperature</h2>
-                <div class="cityTemp">Temperature here!</div>
+                <h2 class="subtitle is-4">Current Weather</h2>
+                <div class="cityTemp">
+                  <h3 id="temp"></h3>
+                  <img id="weatherIcon"src="" alt=""><!--the temp will be displayed to any text area with the id of temp and the icon will display to any
+                  img area with an id of weatherIcon-->
+                </div>
               </div>
             </div>
           </div>
 
           <div class="box">
-            <h2 class="subtitle is-4">Today's Most Viewed News</h2>
+            <h2 class="subtitle is-4">Breaking News</h2>
             <div class="columns">
 
               <div class="card news">

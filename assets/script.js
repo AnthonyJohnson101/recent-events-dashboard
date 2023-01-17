@@ -85,9 +85,8 @@ function getNewsData() {
             getNewsData();
 
 //weather API setup
-let temp
-let icon
-
+let temp = document.querySelector("#temp")
+let weatherIcon = document.querySelector("#weatherIcon")
                
 const successCallback = (position) => {
         console.log(position);
@@ -105,8 +104,8 @@ const successCallback = (position) => {
 
             .then(function (data) {
              console.log(data);
-            /* temp = data.list[0].main.temp
-            icon.src = "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png" */ 
+            temp.textContent = data.main.temp + " °F"
+            weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
             });
         };
     
@@ -118,7 +117,9 @@ const successCallback = (position) => {
 
 //dictionary API setup
 
-let word
+let word = document.querySelector("#word")
+let wordType = document.querySelector("#wordType")
+let definition = document.querySelector("#definition")
 function randomWordData() {
 
     let randomWordUrl = `https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=zzy79quh09ugrg1shgdd2vkt6snleh2tr68h1qp7dma0h9qdy`
@@ -132,7 +133,9 @@ function randomWordData() {
             .then(function (data) {
                 console.log(data);
 
-
+                word.textContent = data.word
+                wordType.textContent = data.definitions[0].partOfSpeech
+                definition.textContent = data.definitions[0].text
             
             });
         
