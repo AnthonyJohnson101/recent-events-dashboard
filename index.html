@@ -21,58 +21,50 @@
 
   <body>
     <header>
+      <!-- our logo -->
       <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
-      <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand"> -->
-      <!-- navbar items, navbar burger... -->
-      <!-- 
-          <li><a href="#tech-stocks">Tech Stocks</a></li>
-          <li><a href="#your-stocks">Your Stocks</a></li>
-          <li><a href="#word-day">Word of the Day</a></li>
-          <li><a href="#current-weather">Current Weather</a></li>
-          <li><a href="#breaking-news">Breaking news</a></li>
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      </nav> -->
+      <nav class="navbar">
+        <li><a href="#tech-stocks">Tech Stocks</a></li>
+        <li><a href="#your-stocks">Your Stocks</a></li>
+        <li><a href="#word-day">Word of the Day</a></li>
+        <li><a href="#current-weather">Current Weather</a></li>
+        <li><a href="#breaking-news">Breaking News</a></li>
+      <nav>
     </header>
+    <!-- hero with todays day and date -->
     <section class="hero">
       <div class="hero-body">
         <p class="title is-1" id="dayOfWeek"></p>
         <p class="subtitle is-3" id="date"></p>
       </div>
     </section>
-    <div class="date"></div>
 
+    <!-- meat of website - "widgets" -->
     <main>
       <div class="container is-fluid" id="container">
+        <!-- splits webpage into 2 columns -->
         <div class="columns">
+          <!-- start of left-hand column -->
           <div class="column left is-4">
+            <!-- box for "Tech Stocks" -->
             <div class="box">
               <h2 class="subtitle is-4" id="tech-stocks">Tech Stocks</h2>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
-                  <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
-                  <p class="openPrice is-size-7" id="aaplOpen"></p>
-                  <p class="closePrice is-size-7" id="aaplClose"></p>
+                  <p class="subtitle is-4 m-0 has-text-white stockName">AAPL</p>
+                  <p class="openPrice is-size-6" id="aaplOpen"></p>
+                  <p class="closePrice is-size-6" id="aaplClose"></p>
                 </div>
               </div>
               <div class="card stock-card">
                 <div class="card-content is-flex-wrap-wrap">
-                  <p class="subtitle is-5 m-0 has-text-white stockName">MSFT</p>
-                  <p class="openPrice is-size-7" id="msftOpen"></p>
-                  <p class="closePrice is-size-7" id="msftClose"></p>
+                  <p class="subtitle is-4 m-0 has-text-white stockName">MSFT</p>
+                  <p class="openPrice is-size-6" id="msftOpen"></p>
+                  <p class="closePrice is-size-6" id="msftClose"></p>
                 </div>
               </div>
             </div>
+            <!-- box for "Your Stocks" -->
             <div class="box">
               <h2 class="subtitle is-4" id="your-stocks">Your Stocks</h2>
               <div class="field is-grouped">
@@ -85,14 +77,21 @@
                   />
                 </p>
                 <p class="control">
-                  <a class="button is-pulled-right m-0 p-1" id="searchButton1">🔍</a>
+                  <a class="button is-pulled-right m-0 p-1" id="searchButton1"
+                    >🔍</a
+                  >
                 </p>
               </div>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
-                  <p class="subtitle is-5 m-0 has-text-white stockName" id="yourStockName1">Your Stock 1</p>
-                  <p class="openPrice is-size-7" id="yourOpen1"></p>
-                  <p class="closePrice is-size-7" id="yourClose1"></p>
+                  <p
+                    class="subtitle is-4 m-0 has-text-white stockName"
+                    id="yourStockName1"
+                  >
+                    Your Stock 1
+                  </p>
+                  <p class="openPrice is-size-6" id="yourOpen1"></p>
+                  <p class="closePrice is-size-6" id="yourClose1"></p>
                 </div>
               </div>
               <div class="field is-grouped">
@@ -105,14 +104,21 @@
                   />
                 </p>
                 <p class="control">
-                  <a class="button is-pulled-right m-0 p-1" id="searchButton2">🔍</a>
+                  <a class="button is-pulled-right m-0 p-1" id="searchButton2"
+                    >🔍</a
+                  >
                 </p>
               </div>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
-                  <p class="subtitle is-5 m-0 has-text-white stockName" id="yourStockName2">Your Stock 2</p>
-                  <p class="openPrice is-size-7" id="yourOpen2"></p>
-                  <p class="closePrice is-size-7" id="yourClose2"></p>
+                  <p
+                    class="subtitle is-4 m-0 has-text-white stockName"
+                    id="yourStockName2"
+                  >
+                    Your Stock 2
+                  </p>
+                  <p class="openPrice is-size-6" id="yourOpen2"></p>
+                  <p class="closePrice is-size-6" id="yourClose2"></p>
                 </div>
               </div>
               <div class="field is-grouped">
@@ -125,37 +131,48 @@
                   />
                 </p>
                 <p class="control">
-                  <a class="button is-pulled-right m-0 p-1" id="searchButton3">🔍</a>
+                  <a class="button is-pulled-right m-0 p-1" id="searchButton3"
+                    >🔍</a
+                  >
                 </p>
               </div>
               <div class="card mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
-                  <p class="subtitle is-5 m-0 has-text-white stockName" id="yourStockName3">Your Stock 3</p>
-                  <p class="openPrice is-size-7" id="yourOpen3"></p>
-                  <p class="closePrice is-size-7" id="yourClose3"></p>
+                  <p
+                    class="subtitle is-4 m-0 has-text-white stockName"
+                    id="yourStockName3"
+                  >
+                    Your Stock 3
+                  </p>
+                  <p class="openPrice is-size-6" id="yourOpen3"></p>
+                  <p class="closePrice is-size-6" id="yourClose3"></p>
                 </div>
               </div>
             </div>
           </div>
+          <!-- end of left-hand column -->
+
+          <!-- start of right-hand column -->
           <div class="column right is-8">
+            <!-- two more columns nested in right-hand column -->
             <div class="columns">
               <div class="column is-half">
+                <!-- box for "Word of the Day" -->
                 <div class="box">
                   <h2 class="subtitle is-4" id="word-day">Word of the Day</h2>
                   <div class="vocabWord">
-
                     <div class="card">
                       <div class="card-content">
                         <div class="content" id="word"></div>
                         <div class="content" id="wordType"></div>
                         <div class="content" id="definition"></div>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
               <div class="column is-half">
+                <!-- box for "Current Weather for {city name}" -->
                 <div class="box">
                   <h2 class="subtitle is-4" id="current-weather">
                     Current Weather
@@ -193,7 +210,9 @@
                 </div>
               </div>
             </div>
+            <!-- nested column ends -->
 
+            <!-- box for "Breaking News" -->
             <div class="box">
               <h2 class="subtitle is-4" id="breaking-news">Breaking News</h2>
               <div class="columns is-desktop">
@@ -282,30 +301,30 @@
     <div class="address">
       <footer>
         <p>
-
-
-          <a href="https://www.google.com/finance/?hl=en">Stock Information 📈</a
-
+          <a a class="footer-link" href="https://www.google.com/finance/?hl=en"
+            >Stock Information 📈</a
           ><a href="https://www.google.com/finance/?hl=en" target="_blank"></a>
         </p>
         <div class="name-group">
-        <img src="github.svg" width="16" height="16">
-        <p>
-          <a href="https://github.com/ndallich1">Nikki</a
-          ><a href="https://github.com/ndallich1" target="_blank"></a
-          ><i class="fa-brands fa-github"></i>
-        </p>
-        <p>
-          <a href="https://github.com/AnthonyJohnson101">Anthony</a
-          ><a href="https://github.com/AnthonyJohnson101" target="_blank"></a
-          ><i class="fa-brands fa-github"></i>
-        </p>
-        <p>
-          <a href="https://github.com/Beatriz-Rivard">Beatriz</a
-          ><a href="https://github.com/Beatriz-Rivard" target="_blank"></a
-          ><i class="fa-brands fa-github"></i>
-        </p>
-      </div>
+          <img src="github.svg" width="16" height="16" />
+          <p>
+            <a class="footer-link" href="https://github.com/ndallich1">Nikki</a
+            ><a href="https://github.com/ndallich1" target="_blank"></a
+            ><i class="fa-brands fa-github"></i>
+          </p>
+          <p>
+            <a class="footer-link" href="https://github.com/AnthonyJohnson101"
+              >Anthony</a
+            ><a href="https://github.com/AnthonyJohnson101" target="_blank"></a
+            ><i class="fa-brands fa-github"></i>
+          </p>
+          <p>
+            <a class="footer-link" href="https://github.com/Beatriz-Rivard"
+              >Beatriz</a
+            ><a href="https://github.com/Beatriz-Rivard" target="_blank"></a
+            ><i class="fa-brands fa-github"></i>
+          </p>
+        </div>
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
