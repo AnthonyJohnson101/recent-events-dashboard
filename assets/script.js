@@ -57,7 +57,8 @@ let searchButton1 = document.querySelector("#searchButton1");
 let input1 = document.querySelector("#input1");
 
 searchButton1.addEventListener("click", function (event) {
-  let ticker = input1.value;
+  let ticker = input1.value.toUpperCase();
+
   getStockData1(ticker);
 });
 
@@ -103,7 +104,7 @@ let searchButton2 = document.querySelector("#searchButton2");
 let input2 = document.querySelector("#input2");
 
 searchButton2.addEventListener("click", function (event) {
-  let ticker = input2.value;
+  let ticker = input2.value.toUpperCase();
   getStockData2(ticker);
 });
 
@@ -148,7 +149,7 @@ let searchButton3 = document.querySelector("#searchButton3");
 let input3 = document.querySelector("#input3");
 
 searchButton3.addEventListener("click", function (event) {
-  let ticker = input3.value;
+  let ticker = input3.value.toUpperCase();
   getStockData3(ticker);
 });
 
