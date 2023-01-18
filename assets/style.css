@@ -4,6 +4,10 @@
   font-weight: 400;
 }
 
+#container {
+  padding-bottom: 40px;
+}
+
 .card-footer-item {
   color: black;
 }
@@ -55,6 +59,22 @@ li {
   font-size: 14px;
 }
 
+.temp {
+  font-weight: 500;
+  font-size: 48px;
+  color:rgb(59, 59, 59);
+}
+
+img.weatherIcon {
+  height: 75px;
+}
+
+.weatherData {
+  text-align: right;
+  font-weight: 500;
+  color: rgb(51, 164, 253);
+}
+
 footer {
   display: flex;
   font-weight: 200;
@@ -62,11 +82,3 @@ footer {
   color: white;
   justify-content: center;
 } 
-<<<<<<< HEAD
-=======
-
-.news {
-    width: 33%;
-    
-}
->>>>>>> 0ce5895be35c1a8e5244cef7d2af724d99a46079
