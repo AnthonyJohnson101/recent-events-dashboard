@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,8 +24,8 @@
       <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
       <section class="hero">
         <div class="hero-body">
-          <p class="title is-1">Monday</p>
-          <p class="subtitle is-3">January 12, 2023</p>
+          <p class="title is-1" id="dayOfWeek"></p>
+          <p class="subtitle is-3" id="date"></p>
         </div>
       </section>
       <div class="date"></div>
@@ -52,24 +53,18 @@
               </div>
             </div>
             <div class="box">
-              <div class="columns">
-                <div class="column">
-                  <h2 class="subtitle is-4">Your Stocks</h2>
-                </div>
-                <div class="column">
-                  <div class="field is-grouped">
-                    <p class="control is-expanded">
-                      <input
-                        class="input"
-                        type="text"
-                        placeholder="Enter Ticker"
-                      />
-                    </p>
-                    <p class="control">
-                      <a class="button is-pulled-right m-0 p-1" id="searchButton">🔍</a>
-                    </p>
-                  </div>
-                </div>
+              <h2 class="subtitle is-4">Your Stocks</h2>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter Ticker 1"
+                  />
+                </p>
+                <p class="control">
+                  <a class="button is-pulled-right m-0 p-1">🔍</a>
+                </p>
               </div>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
@@ -78,12 +73,36 @@
                   <p class="closePrice is-size-7">close</p>
                 </div>
               </div>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter Ticker 2"
+                  />
+                </p>
+                <p class="control">
+                  <a class="button is-pulled-right m-0 p-1">🔍</a>
+                </p>
+              </div>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
                   <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
                   <p class="openPrice is-size-7">open</p>
                   <p class="closePrice is-size-7">close</p>
                 </div>
+              </div>
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter Ticker 3"
+                  />
+                </p>
+                <p class="control">
+                  <a class="button is-pulled-right m-0 p-1">🔍</a>
+                </p>
               </div>
               <div class="card mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
@@ -100,26 +119,49 @@
                 <div class="box">
                   <h2 class="subtitle is-4">Word of the Day</h2>
                   <div class="vocabWord">
-
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="content" id="word"></div>
-                      <div class="content" id="wordType"></div>
-                      <div class="content" id="definition"></div>
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="content" id="word"></div>
+                        <div class="content" id="wordType"></div>
+                        <div class="content" id="definition"></div>
+                      </div>
                     </div>
                   </div>
-
-                </div>
                 </div>
               </div>
               <div class="column is-half">
                 <div class="box">
                   <h2 class="subtitle is-4">Current Weather</h2>
                   <div class="cityTemp">
-                  <h3 id="temp"></h3>
-                  <img id="weatherIcon" src="" alt=""><!--the temp will be displayed to any text area with the id of temp and the icon will display to any
+                    <div class="level is-flex-wrap-wrap mb-4">
+                      <div class="level-item">
+                        <h3 class="m-0 p-0 temp" id="temp"></h3>
+                      </div>
+                      <div class="level-item">
+                        <img
+                          class="weatherIcon"
+                          id="weatherIcon"
+                          src=""
+                          alt=""
+                        />
+                      </div>
+                    </div>
+
+                    <div class="columns is-mobile">
+                      <div class="column is-half pr-1">
+                        <p class="weatherData is-size-5">Feels Like:</p>
+                        <p class="weatherData is-size-5">High:</p>
+                        <p class="weatherData is-size-5">Low:</p>
+                      </div>
+                      <div class="column is-half pl-0">
+                        <p class="is-size-5 m-0" id="feelsLike"></p>
+                        <p class="is-size-5 m-0" id="tempMin"></p>
+                        <p class="is-size-5 m-0" id="tempMax"></p>
+                      </div>
+                    </div>
+                    <!--the temp will be displayed to any text area with the id of temp and the icon will display to any
                   img area with an id of weatherIcon-->
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -232,6 +274,7 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
