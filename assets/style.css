@@ -35,7 +35,7 @@ h1 {
   font-size: 28px;
 }
 
-nav {
+.navbar {
   display: none;
 }
 
@@ -103,7 +103,7 @@ display: flex;
 gap: 15px;
 }
 
-a {
+.footer-link {
   color: white;
 }
 
@@ -119,34 +119,16 @@ a {
 
 #word {
   font-weight: 900;
-  font-size: 23px;
+  font-size: 32px;
+  margin-bottom: 4px;
 }
 
 #wordType {
   font-style:italic;
-  font-size: 15px;;
-  
+  font-size: 20px;;
+  margin-bottom: 6px;
 }
 
 #definition {
   font-size: 15px;
 }
-
-
-
-
-/* @media screen and (max-width: 768px) {
-
-nav {
-  display: contents;
-}
-
-li {
-  list-style-type: none;
-}
-
-nav a {
-  color: white
-} */
-
-

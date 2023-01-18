@@ -54,162 +54,140 @@ msftStockData();
 //Your stocks API setup
 
 //1st Your Stock Setup
-let yourStockName1 = document.querySelector("#yourStockName1")
-let yourOpen1 = document.querySelector("#yourOpen1")
-let yourClose1 = document.querySelector("#yourClose1")
+let yourStockName1 = document.querySelector("#yourStockName1");
+let yourOpen1 = document.querySelector("#yourOpen1");
+let yourClose1 = document.querySelector("#yourClose1");
 
 let searchButton1 = document.querySelector("#searchButton1");
 let input1 = document.querySelector("#input1");
 
-searchButton1.addEventListener("click", function(event) {
-  let ticker = input1.value
+searchButton1.addEventListener("click", function (event) {
+  let ticker = input1.value;
   getStockData1(ticker);
 });
 
-function getStockData1 (ticker) {
+function getStockData1(ticker) {
+  let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`;
+  fetch(stockUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
+    .then(function (data) {
+      console.log(data);
 
-    let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`
-        fetch(stockUrl)
-                .then(function (response) {
-                    
-                    return response.json();
-                })
+      if (data.resultsCount === 0) {
+        yourStockName1.textContent = "Stock Not Found";
 
-                .then(function (data) {
-                  console.log(data);
+        yourOpen1.textContent = "";
 
-                  if (data.resultsCount === 0) {
-                    yourStockName1.textContent = "Stock Not Found"
+        yourClose1.textContent = "";
+      } else {
+        yourStockName1.textContent = data.ticker;
 
-                    yourOpen1.textContent = ""
+        yourOpen1.textContent = "Open: " + "$" + data.results[0].o;
 
-                    yourClose1.textContent = ""
+        yourClose1.textContent = "Close: " + "$" + data.results[0].c;
 
-                  } else {
-                    yourStockName1.textContent = data.ticker
+        localStorage.setItem("stock1", data.ticker);
+      }
+    });
+}
 
-                    yourOpen1.textContent = "Open: " + "$" + data.results[0].o
-
-                    yourClose1.textContent = "Close: " + "$" + data.results[0].c
-
-                    localStorage.setItem("stock1", data.ticker)
-                  };
-
- 
-                });
-            };
-
-let ticker1 = localStorage.getItem("stock1")
+let ticker1 = localStorage.getItem("stock1");
 if (ticker1 != null) {
   getStockData1(ticker1);
-};
-
+}
 
 //2nd Your Stock
-let yourStockName2 = document.querySelector("#yourStockName2")
-let yourOpen2 = document.querySelector("#yourOpen2")
-let yourClose2 = document.querySelector("#yourClose2")
+let yourStockName2 = document.querySelector("#yourStockName2");
+let yourOpen2 = document.querySelector("#yourOpen2");
+let yourClose2 = document.querySelector("#yourClose2");
 
 let searchButton2 = document.querySelector("#searchButton2");
 let input2 = document.querySelector("#input2");
 
-searchButton2.addEventListener("click", function(event) {
-  let ticker = input2.value
+searchButton2.addEventListener("click", function (event) {
+  let ticker = input2.value;
   getStockData2(ticker);
 });
 
-function getStockData2 (ticker) {
+function getStockData2(ticker) {
+  let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`;
+  fetch(stockUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
+    .then(function (data) {
+      console.log(data);
 
-    let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`
-        fetch(stockUrl)
-                .then(function (response) {
-                    
-                    return response.json();
-                })
+      if (data.resultsCount === 0) {
+        yourStockName2.textContent = "Stock Not Found";
 
-                .then(function (data) {
-                  console.log(data);
+        yourOpen2.textContent = "";
 
-                  if (data.resultsCount === 0) {
-                    yourStockName2.textContent = "Stock Not Found"
+        yourClose2.textContent = "";
+      } else {
+        yourStockName2.textContent = data.ticker;
 
-                    yourOpen2.textContent = ""
+        yourOpen2.textContent = "Open: " + "$" + data.results[0].o;
 
-                    yourClose2.textContent = ""
+        yourClose2.textContent = "Close: " + "$" + data.results[0].c;
 
-                  } else {
-                    yourStockName2.textContent = data.ticker
+        localStorage.setItem("stock2", data.ticker);
+      }
+    });
+}
 
-                    yourOpen2.textContent = "Open: " + "$" + data.results[0].o
-
-                    yourClose2.textContent = "Close: " + "$" + data.results[0].c
-
-                    localStorage.setItem("stock2", data.ticker)
-                  };
-
- 
-                });
-            };
-
-let ticker2 = localStorage.getItem("stock2")
+let ticker2 = localStorage.getItem("stock2");
 if (ticker2 != null) {
   getStockData2(ticker2);
-};            
+}
 
-
-let yourStockName3 = document.querySelector("#yourStockName3")
-let yourOpen3 = document.querySelector("#yourOpen3")
-let yourClose3 = document.querySelector("#yourClose3")
+let yourStockName3 = document.querySelector("#yourStockName3");
+let yourOpen3 = document.querySelector("#yourOpen3");
+let yourClose3 = document.querySelector("#yourClose3");
 
 let searchButton3 = document.querySelector("#searchButton3");
 let input3 = document.querySelector("#input3");
 
-searchButton3.addEventListener("click", function(event) {
-  let ticker = input3.value
+searchButton3.addEventListener("click", function (event) {
+  let ticker = input3.value;
   getStockData3(ticker);
 });
 
-function getStockData3 (ticker) {
+function getStockData3(ticker) {
+  let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`;
+  fetch(stockUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
+    .then(function (data) {
+      console.log(data);
 
-    let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`
-        fetch(stockUrl)
-                .then(function (response) {
-                    
-                    return response.json();
-                })
+      if (data.resultsCount === 0) {
+        yourStockName3.textContent = "Stock Not Found";
 
-                .then(function (data) {
-                  console.log(data);
+        yourOpen3.textContent = "";
 
-                  if (data.resultsCount === 0) {
-                    yourStockName3.textContent = "Stock Not Found"
+        yourClose3.textContent = "";
+      } else {
+        yourStockName3.textContent = data.ticker;
 
-                    yourOpen3.textContent = ""
+        yourOpen3.textContent = "Open: " + "$" + data.results[0].o;
 
-                    yourClose3.textContent = ""
+        yourClose3.textContent = "Close: " + "$" + data.results[0].c;
 
-                  } else {
-                    yourStockName3.textContent = data.ticker
-
-                    yourOpen3.textContent = "Open: " + "$" + data.results[0].o
-
-                    yourClose3.textContent = "Close: " + "$" + data.results[0].c
-
-                    localStorage.setItem("stock3", data.ticker)
-                  };
-
- 
-                });
-            };            
-let ticker3 = localStorage.getItem("stock3")
+        localStorage.setItem("stock3", data.ticker);
+      }
+    });
+}
+let ticker3 = localStorage.getItem("stock3");
 if (ticker3 != null) {
   getStockData3(ticker3);
-};  
-
-
+}
 
 //News API setup
 
