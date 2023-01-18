@@ -60,10 +60,43 @@ footer {
   font-weight: 200;
   background-color: rgb(51, 164, 253);
   color: white;
-  justify-content: center;
-} 
-
+  padding-left: 1%;
+  padding-right: 1%;
+}
 .news {
-    width: 33%;
-    
+width: 33%;
+}
+.name-group {
+margin-left: auto;
+display: flex;
+gap: 15px;
+}
+
+a {
+  color: white;
+}
+
+.card-box {
+ background-color: aliceblue;
+ border-radius: 2%;
+}
+
+
+.content {
+  color: rgb(59, 59, 59);
+}
+
+#word {
+  font-weight: 900;
+  font-size: 23px;
+}
+
+#wordType {
+  font-style:italic;
+  font-size: 15px;;
+  
+}
+
+#definition {
+  font-size: 15px;
 }
