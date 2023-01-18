@@ -131,4 +131,42 @@ gap: 15px;
 
 #definition {
   font-size: 15px;
+
 }
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 200;
+    color: white;
+    font-size: 28px;
+  }
+
+  .navbar {
+    display: block;
+    background-color: rgb(51, 164, 253);
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 2px;
+  }
+
+  nav a {
+    color: white;
+    font-weight: 300;
+    padding: 5px;
+  }
+  
+  .hero-body {
+    text-align: center;
+  }
+
+  #dayOfWeek {
+    font-size: 40px;
+  }

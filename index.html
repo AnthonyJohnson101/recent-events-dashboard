@@ -21,20 +21,32 @@
 
   <body>
     <header>
+      <!-- our logo -->
       <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
+      <nav class="navbar">
+        <li><a href="#tech-stocks">Tech Stocks</a></li>
+        <li><a href="#your-stocks">Your Stocks</a></li>
+        <li><a href="#word-day">Word of the Day</a></li>
+        <li><a href="#current-weather">Current Weather</a></li>
+        <li><a href="#breaking-news">Breaking News</a></li>
+      <nav>
     </header>
+    <!-- hero with todays day and date -->
     <section class="hero">
       <div class="hero-body">
         <p class="title is-1" id="dayOfWeek"></p>
         <p class="subtitle is-3" id="date"></p>
       </div>
     </section>
-    <div class="date"></div>
 
+    <!-- meat of website - "widgets" -->
     <main>
       <div class="container is-fluid" id="container">
+        <!-- splits webpage into 2 columns -->
         <div class="columns">
+          <!-- start of left-hand column -->
           <div class="column left is-4">
+            <!-- box for "Tech Stocks" -->
             <div class="box">
               <h2 class="subtitle is-4" id="tech-stocks">Tech Stocks</h2>
               <div class="card mb-4 mt-0 stock-card">
@@ -52,6 +64,7 @@
                 </div>
               </div>
             </div>
+            <!-- box for "Your Stocks" -->
             <div class="box">
               <h2 class="subtitle is-4" id="your-stocks">Your Stocks</h2>
               <div class="field is-grouped">
@@ -137,9 +150,14 @@
               </div>
             </div>
           </div>
+          <!-- end of left-hand column -->
+
+          <!-- start of right-hand column -->
           <div class="column right is-8">
+            <!-- two more columns nested in right-hand column -->
             <div class="columns">
               <div class="column is-half">
+                <!-- box for "Word of the Day" -->
                 <div class="box">
                   <h2 class="subtitle is-4" id="word-day">Word of the Day</h2>
                   <div class="vocabWord">
@@ -154,6 +172,7 @@
                 </div>
               </div>
               <div class="column is-half">
+                <!-- box for "Current Weather for {city name}" -->
                 <div class="box">
                   <h2 class="subtitle is-4" id="current-weather">
                     Current Weather for
@@ -191,7 +210,9 @@
                 </div>
               </div>
             </div>
+            <!-- nested column ends -->
 
+            <!-- box for "Breaking News" -->
             <div class="box">
               <h2 class="subtitle is-4" id="breaking-news">Breaking News</h2>
               <div class="columns is-desktop">
