@@ -22,21 +22,42 @@
   <body>
     <header>
       <h1 class="pl-4"><strong>Day</strong>2<strong>Day</strong></h1>
-      <section class="hero">
-        <div class="hero-body">
-          <p class="title is-1" id="dayOfWeek"></p>
-          <p class="subtitle is-3" id="date"></p>
+      <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"> -->
+      <!-- navbar items, navbar burger... -->
+      <!-- 
+          <li><a href="#tech-stocks">Tech Stocks</a></li>
+          <li><a href="#your-stocks">Your Stocks</a></li>
+          <li><a href="#word-day">Word of the Day</a></li>
+          <li><a href="#current-weather">Current Weather</a></li>
+          <li><a href="#breaking-news">Breaking news</a></li>
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-      </section>
-      <div class="date"></div>
+      </nav> -->
     </header>
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title is-1" id="dayOfWeek"></p>
+        <p class="subtitle is-3" id="date"></p>
+      </div>
+    </section>
+    <div class="date"></div>
 
     <main>
       <div class="container is-fluid" id="container">
         <div class="columns">
           <div class="column left is-4">
             <div class="box">
-              <h2 class="subtitle is-4">Tech Stocks</h2>
+              <h2 class="subtitle is-4" id="tech-stocks">Tech Stocks</h2>
               <div class="card mb-4 mt-0 stock-card">
                 <div class="card-content is-flex-wrap-wrap">
                   <p class="subtitle is-5 m-0 has-text-white stockName">AAPL</p>
@@ -53,7 +74,7 @@
               </div>
             </div>
             <div class="box">
-              <h2 class="subtitle is-4">Your Stocks</h2>
+              <h2 class="subtitle is-4" id="your-stocks">Your Stocks</h2>
               <div class="field is-grouped">
                 <p class="control is-expanded">
                   <input
@@ -120,21 +141,25 @@
             <div class="columns">
               <div class="column is-half">
                 <div class="box">
-                  <h2 class="subtitle is-4">Word of the Day</h2>
+                  <h2 class="subtitle is-4" id="word-day">Word of the Day</h2>
                   <div class="vocabWord">
+
                     <div class="card">
                       <div class="card-content">
                         <div class="content" id="word"></div>
                         <div class="content" id="wordType"></div>
                         <div class="content" id="definition"></div>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
               <div class="column is-half">
                 <div class="box">
-                  <h2 class="subtitle is-4">Current Weather</h2>
+                  <h2 class="subtitle is-4" id="current-weather">
+                    Current Weather
+                  </h2>
                   <div class="cityTemp">
                     <div class="level is-flex-wrap-wrap mb-4">
                       <div class="level-item">
@@ -152,14 +177,14 @@
 
                     <div class="columns is-mobile">
                       <div class="column is-half pr-1">
-                        <p class="weatherData is-size-5">Feels Like:</p>
-                        <p class="weatherData is-size-5">High:</p>
-                        <p class="weatherData is-size-5">Low:</p>
+                        <p class="weatherData is-size-6">Feels Like:</p>
+                        <p class="weatherData is-size-6">High:</p>
+                        <p class="weatherData is-size-6">Low:</p>
                       </div>
                       <div class="column is-half pl-0">
-                        <p class="is-size-5 m-0" id="feelsLike"></p>
-                        <p class="is-size-5 m-0" id="tempMin"></p>
-                        <p class="is-size-5 m-0" id="tempMax"></p>
+                        <p class="is-size-6 m-0" id="feelsLike"></p>
+                        <p class="is-size-6 m-0" id="tempMin"></p>
+                        <p class="is-size-6 m-0" id="tempMax"></p>
                       </div>
                     </div>
                     <!--the temp will be displayed to any text area with the id of temp and the icon will display to any
@@ -170,13 +195,14 @@
             </div>
 
             <div class="box">
-              <h2 class="subtitle is-4">Breaking News</h2>
-              <div class="columns is-full">
+              <h2 class="subtitle is-4" id="breaking-news">Breaking News</h2>
+              <div class="columns is-desktop">
                 <div class="column">
                   <div class="card news">
                     <div class="card-image">
                       <figure class="image is-4by3">
                         <img
+                          class="news-image"
                           src="https://bulma.io/images/placeholders/1280x960.png"
                           alt="Placeholder image"
                           id="thumbnail1"
@@ -186,7 +212,7 @@
                     <div class="card-content">
                       <div class="media">
                         <div class="media-content">
-                          <p class="title is-4" id="title1"></p>
+                          <p class="title is-5 py-2" id="title1"></p>
                         </div>
                       </div>
 
@@ -211,7 +237,7 @@
                     <div class="card-content">
                       <div class="media">
                         <div class="media-content">
-                          <p class="title is-4" id="title2"></p>
+                          <p class="title is-5 py-2" id="title2"></p>
                         </div>
                       </div>
 
@@ -236,7 +262,7 @@
                     <div class="card-content">
                       <div class="media">
                         <div class="media-content">
-                          <p class="title is-4" id="title3"></p>
+                          <p class="title is-5 py-2" id="title3"></p>
                         </div>
                       </div>
                       <div class="content">
@@ -256,24 +282,30 @@
     <div class="address">
       <footer>
         <p>
+
+
           <a href="https://www.google.com/finance/?hl=en">Stock Information 📈</a
+
           ><a href="https://www.google.com/finance/?hl=en" target="_blank"></a>
         </p>
+        <div class="name-group">
+        <img src="github.svg" width="16" height="16">
         <p>
-          <a href="https://github.com/ndallich1">Github</a
+          <a href="https://github.com/ndallich1">Nikki</a
           ><a href="https://github.com/ndallich1" target="_blank"></a
           ><i class="fa-brands fa-github"></i>
         </p>
         <p>
-          <a href="https://github.com/AnthonyJohnson101">Github</a
+          <a href="https://github.com/AnthonyJohnson101">Anthony</a
           ><a href="https://github.com/AnthonyJohnson101" target="_blank"></a
           ><i class="fa-brands fa-github"></i>
         </p>
         <p>
-          <a href="https://github.com/Beatriz-Rivard">Github</a
+          <a href="https://github.com/Beatriz-Rivard">Beatriz</a
           ><a href="https://github.com/Beatriz-Rivard" target="_blank"></a
           ><i class="fa-brands fa-github"></i>
         </p>
+      </div>
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>

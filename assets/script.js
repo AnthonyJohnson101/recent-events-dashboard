@@ -6,59 +6,50 @@
 //Stock API setup
 
 //set to querey selector
-let closePrice
-let openPrice
+let closePrice;
+let openPrice;
 //pulls stock data and applies the text to its selectors
 function aaplStockData() {
-    let aaplOpen = document.querySelector("#aaplOpen")
-    let aaplClose = document.querySelector("#aaplClose")
-    let ticker = 'AAPL' //make input
+  let aaplOpen = document.querySelector("#aaplOpen");
+  let aaplClose = document.querySelector("#aaplClose");
+  let ticker = "AAPL"; //make input
 
-    let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`
-        fetch(stockUrl)
-                .then(function (response) {
-                    
-                    return response.json();
-                })
+  let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`;
+  fetch(stockUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
-                .then(function (data) {
-                    console.log(data);
+    .then(function (data) {
+      console.log(data);
 
-                    aaplOpen.textContent = "Open: " + "$" + data.results[0].o
-                    aaplClose.textContent = "Close: " + "$" + data.results[0].c
-                });
-            
-            };
+      aaplOpen.textContent = "Open: " + "$" + data.results[0].o;
+      aaplClose.textContent = "Close: " + "$" + data.results[0].c;
+    });
+}
 
-           
-
-            aaplStockData();
-
+aaplStockData();
 
 function msftStockData() {
-    let msftOpen = document.querySelector("#msftOpen")
-    let msftClose = document.querySelector("#msftClose")
-    let ticker = 'MSFT' //make input
+  let msftOpen = document.querySelector("#msftOpen");
+  let msftClose = document.querySelector("#msftClose");
+  let ticker = "MSFT"; //make input
 
-    let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`
-        fetch(stockUrl)
-                .then(function (response) {
-                    
-                    return response.json();
-                })
+  let stockUrl = `https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=ZIxeNYptpyEx7ttuoFfptrcihI53Y_lo`;
+  fetch(stockUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
-                .then(function (data) {
-                    console.log(data);
+    .then(function (data) {
+      console.log(data);
 
-                     msftOpen.textContent = "Open: " + "$" + data.results[0].o
-                     msftClose.textContent = "Close: " + "$" + data.results[0].c
-                });
-            
-            };
+      msftOpen.textContent = "Open: " + "$" + data.results[0].o;
+      msftClose.textContent = "Close: " + "$" + data.results[0].c;
+    });
+}
 
-           
-
-            msftStockData();
+msftStockData();
 
 //Your stocks API setup
 
