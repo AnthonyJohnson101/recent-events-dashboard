@@ -199,31 +199,31 @@ let thumbnail3 = document.querySelector("#thumbnail3");
 let title3 = document.querySelector("#title3");
 let articleUrl3 = document.querySelector("#articleUrl3");
 
-// function getNewsData() {
-//   let newsUrl = `https://gnews.io/api/v4/top-headlines?token=c0ce1376fc76d20830d8473d38ce3ea9&topic=breaking-news&country=us`;
-//   fetch(newsUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
+function getNewsData() {
+  let newsUrl = `https://gnews.io/api/v4/top-headlines?token=c0ce1376fc76d20830d8473d38ce3ea9&topic=breaking-news&country=us`;
+  fetch(newsUrl)
+    .then(function (response) {
+      return response.json();
+    })
 
-//     .then(function (data) {
-//       console.log(data);
+    .then(function (data) {
+      console.log(data);
 
-//       thumbnail1.src = data.articles[0].image;
-//       title1.textContent = data.articles[0].title;
-//       articleUrl1.href = data.articles[0].url;
+      thumbnail1.src = data.articles[0].image;
+      title1.textContent = data.articles[0].title;
+      articleUrl1.href = data.articles[0].url;
 
-//       thumbnail2.src = data.articles[1].image;
-//       title2.textContent = data.articles[1].title;
-//       articleUrl2.href = data.articles[1].url;
+      thumbnail2.src = data.articles[1].image;
+      title2.textContent = data.articles[1].title;
+      articleUrl2.href = data.articles[1].url;
 
-//       thumbnail3.src = data.articles[2].image;
-//       title3.textContent = data.articles[2].title;
-//       articleUrl3.href = data.articles[2].url;
-//     });
-// }
+      thumbnail3.src = data.articles[2].image;
+      title3.textContent = data.articles[2].title;
+      articleUrl3.href = data.articles[2].url;
+    });
+}
 
-// getNewsData();
+getNewsData();
 
 //weather API setup
 let temp = document.querySelector("#temp");
