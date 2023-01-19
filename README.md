@@ -10,7 +10,8 @@ For this project, the goal was to create a dashboard with multiple different wid
 
 To navigate to the web application in your browser, click [here](https://anthonyjohnson101.github.io/recent-events-dashboard/)
 
-![screenshot of web application]({insert_file_path_here})
+![screenshot of web application](./assets/images/screenshot_of_website_desktop.jpg)
+![screenshot of mobile application](./assets/images/screenshot_of_website_mobile.jpg)
 
 ## Credits
 
@@ -39,8 +40,8 @@ Features for Day2Day include the following:
 
 APIs used:
 
-- X
-- X
-- X
-- X
-- X
+- Stocks: https://polygon.io/
+- Word of the day: https://www.wordnik.com/
+- Weather: https://openweathermap.org/
+- News Articles: https://gnews.io/
+- Geolocation API: browser based
