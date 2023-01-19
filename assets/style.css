@@ -117,6 +117,10 @@ gap: 15px;
   color: rgb(59, 59, 59);
 }
 
+.word-day {
+  background-color: aliceblue;
+}
+
 #word {
   font-weight: 900;
   font-size: 32px;

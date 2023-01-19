@@ -232,13 +232,12 @@ let feelsLike = document.querySelector("#feelsLike");
 let tempMin = document.querySelector("#tempMin");
 let tempMax = document.querySelector("#tempMax");
 let weatherIcon = document.querySelector("#weatherIcon");
-let weatherLocation = document.querySelector("#current-weather")
+let weatherLocation = document.querySelector("#current-weather");
 const successCallback = (position) => {
   console.log(position);
 
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  
 
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=536f859786a518738a9b20276be37ff1&units=imperial`;
 
@@ -249,7 +248,7 @@ const successCallback = (position) => {
 
     .then(function (data) {
       console.log(data);
-      weatherLocation.textContent = "Current Weather for " + data.name
+      weatherLocation.textContent = "Current Weather for " + data.name;
       temp.textContent = data.main.temp + "°F";
       feelsLike.textContent = data.main.feels_like + "°F";
       tempMin.textContent = data.main.temp_min + "°F";
